@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>ServletPractice</display-name>
+	<!--在web容器中配置servlet容器 -->
+	<servlet>
+		<!--servlet名称空间,可以随便起 -->
+		<servlet-name>ServletInterface</servlet-name>
+		<!--指定Servlet类名,由包名和类名构成 -->
+		<servlet-class>servlet.Interface.ServletInterface</servlet-class>
+		<!-- 配置Servlet初始化参数 -->
+		<init-param>
+			<!--参数名 -->
+			<param-name>pName1</param-name>
+			<!--参数值 -->
+			<param-value>我是初始化参数pName1</param-value>
+		</init-param>
+		<init-param>
+			<param-name>pName2</param-name>
+			<param-value>我是初始化参数pName2</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet>
+		<servlet-name>ServletExtends</servlet-name>
+		<servlet-class>servlet.extend.ServletExtends</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>ServletExtendsDemo</servlet-name>
+		<servlet-class>servlet.extend.ServletExtendsDemo</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>servlet.login.LoginServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>FirstServlet</servlet-name>
+		<servlet-class>servlet.extend.FirstServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ServletContextSetAttribute</servlet-name>
+		<servlet-class>servlet.servletContext.ServletContextSetAttribute</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>ServletContextGetAttribute</servlet-name>
+		<servlet-class>servlet.servletContext.ServletContextGetAttribute</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>LifeCycleServlet</servlet-name>
+		<servlet-class>servlet.life.LifeCycleServlet</servlet-class>
+		<init-param>
+			<param-name>startPoint</param-name>
+			<param-value>3500</param-value>
+		</init-param>
+	</servlet>
+	<servlet>
+		<servlet-name>LifeDemo</servlet-name>
+		<servlet-class>servlet.life.LifeDemo</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ServletContextDemo</servlet-name>
+		<servlet-class>servlet.servletContext.ServletContextDemo</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>ServletContextTest</servlet-name>
+		<servlet-class>servlet.servletContext.ServletContextTest</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletContextTest</servlet-name>
+		<url-pattern>/ServletContextTest</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ServletContextGetAttributeNames</servlet-name>
+		<servlet-class>servlet.servletContext.ServletContextGetAttributeNames</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletContextGetAttributeNames</servlet-name>
+		<url-pattern>/ServletContextGetAttributeNames</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ServletContextRemoveAttribute</servlet-name>
+		<servlet-class>servlet.servletContext.ServletContextRemoveAttribute</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletContextRemoveAttribute</servlet-name>
+		<url-pattern>/ServletContextRemoveAttribute</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ServletConfigTest</servlet-name>
+		<servlet-class>servlet.servletConfig.ServletConfigTest</servlet-class>
+		<init-param>
+			<param-name>name1</param-name>
+			<param-value>name1</param-value>
+		</init-param>
+		<init-param>
+			<param-name>name2</param-name>
+			<param-value>name2</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletConfigTest</servlet-name>
+		<url-pattern>/ServletConfigTest</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>InitParamServlet</servlet-name>
+		<servlet-class>servlet.servletConfig.InitParamServlet</servlet-class>
+		<init-param>
+			<param-name>zhangsan</param-name>
+			<param-value>12345</param-value>
+		</init-param>
+		<init-param>
+			<param-name>lisi</param-name>
+			<param-value>12345</param-value>
+		</init-param>
+		
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>InitParamServlet</servlet-name>
+		<url-pattern>/InitParamServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ContextParamServlet</servlet-name>
+		<servlet-class>servlet.servletContext.ContextParamServlet</servlet-class>
+		<init-param>
+			<param-name>zhangsan</param-name>
+			<param-value>12345</param-value>
+		</init-param>
+		<init-param>
+			<param-name>lisi</param-name>
+			<param-value>12345</param-value>
+		</init-param>
+		
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ContextParamServlet</servlet-name>
+		<url-pattern>/ContextParamServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>GetRealPath</servlet-name>
+		<servlet-class>servlet.servletContext.GetRealPath</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetRealPath</servlet-name>
+		<url-pattern>/GetRealPath</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>GetResourceAsStream</servlet-name>
+		<servlet-class>servlet.servletContext.GetResourceAsStream</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetResourceAsStream</servlet-name>
+		<url-pattern>/GetResourceAsStream</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>GetResourcePaths</servlet-name>
+		<servlet-class>servlet.servletContext.GetResourcePaths</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetResourcePaths</servlet-name>
+		<url-pattern>/GetResourcePaths</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ServiceCount</servlet-name>
+		<servlet-class>servlet.servletContext.ServiceCount</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServiceCount</servlet-name>
+		<url-pattern>/ServiceCount</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>GetClassSources</servlet-name>
+		<servlet-class>servlet.servletContext.GetClassSources</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetClassSources</servlet-name>
+		<url-pattern>/GetClassSources</url-pattern>
+	</servlet-mapping>
+	
+	<!--配置servlet的访问方式 -->
+	<servlet-mapping>
+		<!--对应要访问的servlet实例名称 -->
+		<servlet-name>ServletInterface</servlet-name>
+		<!-- 以斜杠开头，把一个路径与一个Servlet绑定在一起 ,访问时,前边的服务器域名+端口号+应用程序路径就是访问路径 -->
+		<!-- 随便起，必须以斜杠开头！ -->
+		<url-pattern>/ServletInterface</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ServletExtends</servlet-name>
+		<url-pattern>/ServletExtends</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ServletExtendsDemo</servlet-name>
+		<url-pattern>/ServletExtendsDemo</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/LoginServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>FirstServlet</servlet-name>
+		<url-pattern>/FirstServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ServletContextSetAttribute</servlet-name>
+		<url-pattern>/ServletContextSetAttribute</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ServletContextGetAttribute</servlet-name>
+		<url-pattern>/ServletContextGetAttribute</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LifeCycleServlet</servlet-name>
+		<url-pattern>/LifeCycleServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LifeDemo</servlet-name>
+		<url-pattern>/LifeDemo</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ServletContextDemo</servlet-name>
+		<url-pattern>/ServletContextDemo</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
